@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI Platinum Tracker</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">L</div>
+    <div>
+      <h1>Leonida Trophy Guide</h1>
+      <p class="subtitle">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; 1 platinum &middot; 2 gold &middot; 6 silver &middot; 46 bronze &middot; fully offline</p>
+    </div>
+  </div>
+  <div class="progress-block" id="progressBlock">
+    <div class="progress-count"><span id="earnedCount">0</span><span class="progress-total"> / 55 earned</span></div>
+    <div class="progress-bar" role="progressbar" aria-label="Trophies earned" aria-valuemin="0" aria-valuemax="55" aria-valuenow="0" id="progressBar"><div class="progress-fill" id="progressFill"></div></div>
+    <p class="progress-detail" id="progressDetail">0% complete &middot; 55 to go</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Guide sections">
+  <button type="button" class="tab active" id="tabChecklist" data-tab="checklist">Checklist</button>
+  <button type="button" class="tab" id="tabRoadmap" data-tab="roadmap">Platinum roadmap</button>
+  <button type="button" class="tab" id="tabMissable" data-tab="missable">Missable trophies</button>
+</nav>
+
+<section class="toolbar" id="toolbar" aria-label="Filters and progress tools">
+  <label class="search-label">Search <input type="search" id="searchBox" placeholder="Search a trophy, mission or guide&hellip;" autocomplete="off"></label>
+  <label>Kind
+    <select id="kindFilter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+    </select>
+  </label>
+  <label>Grade
+    <select id="gradeFilter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label>Status
+    <select id="statusFilter">
+      <option value="all">All trophies</option>
+      <option value="earned">Earned only</option>
+      <option value="remaining">Remaining only</option>
+    </select>
+  </label>
+  <label class="check-label"><input type="checkbox" id="spoilerToggle" checked> Hide story spoilers</label>
+  <div class="tool-buttons">
+    <button type="button" id="exportButton">Export progress</button>
+    <button type="button" id="importButton">Import progress</button>
+    <input type="file" id="importFile" accept="application/json,.json" hidden>
+    <button type="button" id="resetButton" class="quiet">Reset</button>
+  </div>
+</section>
+
+<main class="layout">
+  <section class="panel list-panel" id="checklistPanel" aria-label="Trophy checklist">
+    <p class="panel-note" id="listNote">Tick a trophy when you earn it. Progress is saved in this browser.</p>
+    <p class="panel-note hidden" id="emptyNote">No trophies match these filters. Clear the search or widen a filter.</p>
+    <ul class="trophy-list" id="trophyList"></ul>
+  </section>
+
+  <aside class="panel detail-panel" id="detailPanel" aria-label="Trophy guide detail" aria-live="polite"></aside>
+
+  <section class="panel roadmap-panel hidden" id="roadmapPanel" aria-label="Roadmap to the platinum"></section>
+
+  <section class="panel missable-panel hidden" id="missablePanel" aria-label="Missable trophies"></section>
+</main>
+
+<footer class="foot">
+  <p>Names, descriptions and grades are shown exactly as PlayStation publishes them. Every guide is written in our own words for this entry and names the published guide it draws on; where a method is not yet confirmed, the guide says so plainly. No Rockstar artwork is used. Sources: the official list on Exophase and PSNProfiles; the PowerPyx GTA 6 Trophy Guide; the GTABase GTA 6 Trophy List; the CryptoGames GTA 6 Trophy Guide; the Output Lag GTA 6 Trophy List.</p>
+  <p>Works entirely offline: this page loads only its own files and saves your progress in this browser. No account, no network, no tracking.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
